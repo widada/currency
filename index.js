@@ -1,7 +1,7 @@
 const BcaCurrency = require('./scrapper/bca')
-const openExchane = require('./scrapper')
+const openExchange = require('./scrapper/openExchange')
 
 module.exports = {
 	BcaCurrency: BcaCurrency,
-	openExchane: openExchane
+	openExchange: openExchange
 }
