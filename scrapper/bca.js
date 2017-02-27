@@ -10,7 +10,7 @@ const option = {
 }
 
 
-let getCurrienciesBca = () => {
+module.exports = () => {
 	return request(option)
 		.then($ => {
 			let allContent = []
@@ -59,7 +59,7 @@ let getCurrienciesBca = () => {
 				}
 
 			})
-			console.log(currencies)
+			// console.log(currencies)
 			return currencies
 		})
 		.catch(err => {
@@ -67,4 +67,3 @@ let getCurrienciesBca = () => {
 			process.exit(0);
 		})
 }
-module.exports = getCurrienciesBca

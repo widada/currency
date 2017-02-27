@@ -1,9 +1,10 @@
 const request = require('request-promise');
 const url = 'http://openexchangerates.org/api/latest.json?app_id='
 
-let openExchange = (appId) => {
+module.exports = (appId) => {
 	return request(url+appId)
 		.then(currencies => {
+			// console.log(currencies)
 			return currencies
 		})
 		.catch(err => {
@@ -11,5 +12,3 @@ let openExchange = (appId) => {
 			process.exit(0)
 		})
 }
-
-module.exports = openExchange
